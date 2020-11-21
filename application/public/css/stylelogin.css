@@ -1,0 +1,64 @@
+   
+h1{
+    
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    color: #f51c88;
+    text-align:center;
+    padding: 50px 0 20px;
+    text-transform: uppercase;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-image: url(../images/v500-taus-03a-retrofuturismbackground_1.jpg)
+    
+}
+.container{
+    width: 50%;
+    height: 400px;
+    background: purple;
+    margin: 0 auto;
+    border: 2px solid purple
+;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+.container .left{
+    float: left;
+    width: 50%;
+    height: 400px;
+    background-image: url(../images/AestheticRetro.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    
+}
+.container .right
+{
+    float: right;
+
+    width: 50%;
+    height: 400px;
+    box-sizing: border-box;
+
+}
+
+.formBox{
+    width: 100%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    height: 400px;
+    background: #ffffff;
+}
+
+
+
+
+
+
+

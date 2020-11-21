@@ -1,0 +1,33 @@
+h1{
+    
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    color: #f51c88;
+    text-align:center;
+    padding: 50px 0 20px;
+    text-transform: uppercase;
+    
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-image: url(../images/drawn170100045.jpg)
+    
+}
+.container{
+    width: 70%;
+    height: 400px;
+    background:#c956ac;
+    margin: 0 auto;
+    border: 2px solid purple;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
