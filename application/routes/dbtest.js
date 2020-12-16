@@ -10,4 +10,11 @@ router.get('/getAllUsers', (req, res, next)=>{
     res.send(results);
    })
 });
+
+router.get('/getAllPosts', (req, res, next)=>{
+   db.query('SELECT * from posts;', (err, results, fields) => {
+    console.log(results);
+    res.send(results);
+   })
+});
 module.exports =router; 

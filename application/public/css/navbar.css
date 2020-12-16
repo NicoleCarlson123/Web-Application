@@ -1,7 +1,7 @@
 
 
 header{
-    background: #55d6aa;
+    background: rgb(73, 145, 173);
     padding: 10px;
 }
 
@@ -56,9 +56,12 @@ nav a:hover::before{
     width: 100%;
 }
 
-footer{
-    width:100%;
-    padding: 60px 0px;
-    
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(73, 145, 173);
+    color: white;
     text-align: center;
-}
+  }

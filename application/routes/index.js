@@ -17,5 +17,12 @@ router.get('/registration',(req, res, next) => {
 router.get('/postimage',(req, res, next) => {
   res.render("postimage");
 });
+router.get('/Imagepost',(req, res, next) => {
+  res.render("Imagepost");
+});
+router.get('/home',(req, res, next) => {
+  res.render("home");
+});
+
 
 module.exports = router;

@@ -1,4 +1,4 @@
-#box{
+/* #box{
     display: grid;
     grid-template-rows: repeat(4,1fr);
     grid-template-columns: repeat(4,1fr);
@@ -7,5 +7,18 @@
     gap: .25em;
     margin: 4px;
     width: 100%;
+    
+}*/
+h1{
+    color: white;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-image: url(../images/v500-taus-03a-retrofuturismbackground_1.jpg)
+    
     
 }
