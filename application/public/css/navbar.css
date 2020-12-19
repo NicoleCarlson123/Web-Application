@@ -70,6 +70,11 @@ nav a:hover::before{
     top: 25%;
     transform: translate(-50%,0);
     z-index: 9999;
+    text-size-adjust: 50px;
+    color: red;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color:white ;
+
 }
 
 #flash-message div{

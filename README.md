@@ -19,9 +19,14 @@ Please follow the instructions below and fill in the information requested when 
 # Build/Run Instructions
 
 ## Build Instructions
-1. steps here
-2. steps here
+1. Clone repo with HTTPS or SSH link 
+2. Open code in IDe
+3. CD into Csc317-termproject-NicoleCarlson123
+3. CD into application
+5. Type npm i into terminal
+6. Type npm start into terminal
 
 ## Run Instructions
-1. steps here
-2. steps here 
+1. type npm start into terminal
+2. In browser type localhost:3000/
+3. Navigate through website using nav bar
