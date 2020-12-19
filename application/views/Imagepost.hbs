@@ -1,10 +1,44 @@
-<!DOCTYPE html>
+<div id = "post-container">
+    <img id = "image-post-image" src="{{currentPost.photopath}}">
+    <div id="info-message-grid">
+        <div id="infor">
+            <header id="imgae-post-title">
+                <h2 id="image-post-title-text"></h2>
+            </header>
+            <div id ="image-post-author" class="infor-tags">{{currentPost.username}}</div>
+            <div id ="image-post-date" class="infor-tags">{{currentPost.created}}</div>
+            <div id ="image-post-desc" class="infor-tags">{{currentPost.description}}</div>
+
+        </div>
+        <div id ="messages">
+            <header id = "comment-title">
+                <h2>Comments</h2>
+            </header>
+            <div id="message-list"></div>
+            <div id="comment-box">
+                <textarea id="comment-box-text"></textarea>
+                <i id="comment-box-button" class="fa fa-comment" aria-hidden="true" style= "text-align: center;"></i>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{{!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Images</title>
-    <link rel="stylesheet" type= "text/css" href="public/css/styleimagepost.css"
+    <link rel="stylesheet" type= "text/css" href="public/css/styleimagepost.css",
 
 </head>
 <body>
@@ -19,10 +53,10 @@
         <br />
 
         <div class="image">
-        <img src= "../images/e4811fcef191a21096477d4daf0c6afd.png" alt="This was a fake image">
+        <img src= "../images/b78be44bc9750cce2ce1b9e5c5442280--space-girl-space-age" alt="This was a fake image">
 
     </form>
     </div>
 </div>
 </body>
-</html>
+</html> --}}

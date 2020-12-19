@@ -2,18 +2,26 @@
 <head>
  <link rel="stylesheet" type= "text/css" href="public/css/navbar.css" >
  <meta charset="UTF-8">
- <title>navbar</title>
+ <title>NCWEB</title>
  </head>
  <header>
 
     <div class ="containerNav">
+      
         <nav id = "nav-bar">
         <ul>
-        <li><a href="home">home</a></li>
+        <input id = "search-text" name="search-text" type="text">
+        <i id="search-button"></i>
+        <button type= "search" >search</button>
+        <li><a href="/">home</a></li>
+        {{#if logged}}
+        <a id = "logout-button">Logout</a>
+        {{else}}
         <li><a href = "login">Login</a></li>
-        <li><a href = "Imagepost">ImagePost</a></li>
+        {{/if}}
+        
         <li><a href = "registration">Registration</a></li>
-        <li><a href="postimage">PostImage</a></li>
+        <li><a href="postimage">Post Image</a></li>
        
         </ul>
    

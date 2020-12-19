@@ -17,12 +17,12 @@
         <div class= "RegistrationForm">
         <div id="error"></div>
   
-    <form id = "form" action= "#"  method="POST" action="/users/register" enctype="application/x-www-form-urlencoded">
-        <p>Username: <input type= "text" name="Username" /></p>
+    <form id = "form" method="POST" action="/users/register" enctype="application/x-www-form-urlencoded">
+        <p>Username: <input type= "text"required name="username"  /></p>
         <br/>
-        <p>Email: <input type="email" name="email"/></p>
+        <p>Email: <input type="email" required name="email"/></p>
         <br/>
-        <p>Password: <input type="text" name="password"/></p>
+        <p>Password: <input type="text" required name="password"/></p>
         <br/>
         <p> Accept that you are 13+ years of age <input type="checkbox" required= "required"/></p>
         <p>Accept Terms of Service and Privacy Rules <input type= "checkbox" required= "required"/></p>
