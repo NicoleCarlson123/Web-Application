@@ -98,7 +98,7 @@ router.post('/login', (req, res, next) => {
        //res.cookie("logged", username, {expires: new Date(Date.now()+900000), httpOnly: false});
        res.locals.logged= true;
        req.flash('success', 'You have been successfully logged in!');
-       res.render('index');
+       res.redirect("/");
     }else{
       throw new UserError("Invalid username and/or password!", "/login", 200 );
     }
@@ -129,5 +129,7 @@ router.post('/logout' , (req, res, next)=> {
     }
   })
 });
+
+
 module.exports = router;
 

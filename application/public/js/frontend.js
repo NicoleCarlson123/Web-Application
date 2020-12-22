@@ -36,8 +36,8 @@ function createCard(postData){
 }
 
 function executeSearch(){
-    let searchTerm = document.getElementById('search-text').nodeValue;
-    if(searchTerm){
+    let searchTerm = document.getElementById('search-text').value;
+    if(!searchTerm){
         location.replace('/');
         return;
     }
@@ -49,7 +49,7 @@ function executeSearch(){
     })
     .then((data_json) =>{
         let newMainContentHTML = '';
-        data_json.results.forEah((row) => {
+        data_json.results.forEach((row) => {
             newMainContentHTML += createCard(row);
         });
         mainContent.innerHTML = newMainContentHTML;
