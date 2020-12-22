@@ -11,13 +11,13 @@
  
     
     </div>
-    <div>
+    
       {{#if logged}}
         <script>
           let ele = document.getElementById('logout-button');
           if(ele){
             ele.onclick = (even) =>{
-              fetch('/user/logout',{
+              fetch('/users/logout',{
                 method: "POST"
               })
               .then((data) => {
@@ -27,6 +27,6 @@
           }
         </script>
       {{/if}}
-    </div>
+    
     </body>
     </html>
