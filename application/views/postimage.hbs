@@ -12,25 +12,27 @@
     <div class="container">
     <div class="postimage">
 
-    <form>
+    <form method="POST" enctype="multipart/form-data" action="/posts/createPost">
+        <br />
         <label>Post Title</label>
+        <input type=text name="title"/>
         <br />
-        <input type=text/>
         <br />
-
         <label> Post Description</label>
+        <input type=text name="description"/>
         <br />
-        <input type=text/>
         <br />
 
         <label> Select an image</label>
         <br />
-        <input type=file>
+        <input type=file name="uploadImage">
+        <br />
         <br />
         <label>Accept Acceptable Use Policy</label>
         <input type="checkbox">
         <br />
         <a href= "https://acceptableUsePol.com"> Acceptable Use Policy</a>
+        <br />
         <br />
         <button type= "submit">Post</button>
     </form>

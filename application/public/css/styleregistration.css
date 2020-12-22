@@ -3,10 +3,12 @@ h1{
     margin: 0;
     padding: 0;
     font-size: 36px;
-    color: #f51c88;
+    color: rgb(178, 178, 248);
     text-align:center;
     padding: 50px 0 20px;
     text-transform: uppercase;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: whitesmoke;
 
 }body{
     margin: 0;
@@ -20,7 +22,7 @@ h1{
 .container{
     width: 70%;
     height: 400px;
-    background: #ffffff;
+    background:  rgb(235, 230, 230);;
     margin: 0 auto;
     border: 2px solid purple
 ;
@@ -40,7 +42,7 @@ h1{
 {
     float: right;
 
-    width: 55%;
+    width: 50%;
     height: 400px;
     box-sizing: border-box;
 
