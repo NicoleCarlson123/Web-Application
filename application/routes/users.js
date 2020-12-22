@@ -16,10 +16,10 @@ router.post('/register', (req, res, next) =>{
 
  //do server side validation
 
- db.execute("SELECT * FROM users WHERE username=?",[username])
+ db.query("SELECT * FROM users WHERE username=?",[username])
   .then(([results, fields]) => {
     if(results && results.length ==0){
-      return db.execute("SELECT * FROM users WHERE email =?")
+      return db.query("SELECT * FROM users WHERE email =?", [email]);
     }else{
       throw new UserError(
         "Registration Failed: Username already exists",
@@ -41,8 +41,8 @@ router.post('/register', (req, res, next) =>{
     }
   })
   .then((hashedPassword) => {
-      let baseSQL = "INSERT INTO users (username, email, password, created) VALUES(?,?,?,now());"
-      return db.execute(baseSQL,[username,email,hashedPassword])
+      let baseSQL = "INSERT INTO users (username, email, password, created) VALUES(?,?,?,now());";
+      return db.query(baseSQL,[username,email,hashedPassword]);
     
   })
   .then(([results, fields])=> {
@@ -78,9 +78,9 @@ router.post('/login', (req, res, next) => {
 
   //do server side validation
 
-  let baseSQL = "SELECT id, username, password FROM users WHERE username =?;"
+  let baseSQL = "SELECT id, username, password FROM users WHERE username =?;";
   let userId;
-  db.execute(baseSQL,[username])
+  db.query(baseSQL,[username])
   .then(([results, fields])=> {
     if(results && results.length == 1){
       let hashedPassword = results[0].password;
@@ -94,10 +94,11 @@ router.post('/login', (req, res, next) => {
     if(passwordsMatched){
        successPrint(`User ${username} is logged in`);
        req.session.username = username;
-       res.session.id = userId;
-       res.cookie("logged", username, {expires: new Date(Date.now()+900000), httpOnly: false});
+       req.session.userId = userId;
+       //res.cookie("logged", username, {expires: new Date(Date.now()+900000), httpOnly: false});
+       res.locals.logged= true;
        req.flash('success', 'You have been successfully logged in!');
-       res.redirect('/');
+       res.render('index');
     }else{
       throw new UserError("Invalid username and/or password!", "/login", 200 );
     }

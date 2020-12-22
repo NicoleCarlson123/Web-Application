@@ -28,16 +28,16 @@ router.post('/createPost', uploader.single("uploadImage"), (req, res, next)=>{
     let destinationOfThumbnail = req.file.destination + "/" + fileAsThumbnail;
     let title = req.body.title;
     let description = req.body.description;
-    let fk_userID = req.session.userID;
+    let fk_userId = req.session.userId;
 
     //server validation on your own
 
     sharp(fileUploaded)
     .resize(200)
     .toFile(destinationOfThumbnail)
-    .let(()=>{
-        let baseSQL = 'INSERT INTO posts (tite, description, photopath, thumbnail, created, fk_userid) VALUE(?,?,?,?, now(),?);;';
-        return db.execute(baseSQL, [title, description, fileUploaded, destinationOfThumbnail, fk_userID]);
+    .then(()=>{
+        let baseSQL = 'INSERT INTO posts (title, description, photopath, thumbnail, created, fk_userid) VALUE(?,?,?,?, now(),?);;';
+        return db.query(baseSQL,[title, description, fileUploaded, destinationOfThumbnail, fk_userId]);
     })
     .then(([results, fields])=>{
         if(results && results.affectedRows){
@@ -75,7 +75,7 @@ router.get('/search', (req, res, next) =>{
         FROM posts \
         HAVING haystack like ?;";
         let sqlReadySearchTerm = "%" +searchTerm+"%";
-        db.execute(baseSQL, [sqlReadySearchTerm])
+        db.query(baseSQL, [sqlReadySearchTerm])
         .then(([results, fields]) => {
             if(results && results.length){
                 res.send({

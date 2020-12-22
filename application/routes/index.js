@@ -37,7 +37,7 @@ router.get('/post/:id', (req,res,next)=>{
  WHERE p.id=?;";
 
  let postId = req.params.id;
-  db.execute(baseSQL, [postId])
+  db.query(baseSQL, [postId])
   .then(([results, fields]) =>{
     if(results && results.length){
       let post =results[0];
